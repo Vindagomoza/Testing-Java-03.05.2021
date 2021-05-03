@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/httpclient-4.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/httpcore-4.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/httpmime-4.5.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/netty-3.5.7.Final.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/phantomjsdriver-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/selenium-java-2.53.1.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/selenium-java-2.53.1-srcs.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumJars/testng-6.9.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
