@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+
 
 import java.time.LocalDateTime;
  
@@ -22,12 +22,6 @@ public class firstSeleniumTest {
 		System.setProperty("webdriver.chrome.driver", "C://Users//loopo//Desktop//demoProjects//chromedriver_win32//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String var1 = "Le champ Nom de famille est requis.";
-		String var2 = "Le champ Mot de passe est requis.";
-		File file = new File("error.txt");
-		FileWriter fw = new FileWriter(file, true);
-		PrintWriter pw = new PrintWriter(fw);
-
 		driver.manage().window().maximize();
 		driver.get("https://prelive.aptimea.com/form/questionnaire?current=/node/96");
 		Thread.sleep(500);
@@ -62,20 +56,33 @@ public class firstSeleniumTest {
 		driver.findElement(By.id("edit-first-name")).sendKeys("Test");
 		driver.findElement(By.id("edit-wizard-next")).click();
 		Thread.sleep(1000);
-		List<WebElement> allLi = driver.findElements(By.tagName("li"));
-		for(WebElement eachLi:allLi){
-		    String tmp = eachLi.getText();
-		    if(tmp.contains(var1)){
-		    	LocalDateTime date1 = java.time.LocalDateTime.now();
-		    	String strDate1 = (tmp + " ---------- " + date1);		    	System.out.println(strDate1);
-		    	pw.println(strDate1);
-		    }else if (tmp.contains(var2)) {
-		    	LocalDateTime date2 = java.time.LocalDateTime.now();
-		    	String strDate2 = (tmp + " ---------- " + date2);
-		    	System.out.println(strDate2);
-				pw.println(strDate2);
-		    }
-	}
+		String lis = "er";
+		String a[] = new String [10];
+		System.out.println(lis.length());
+		
+		for(int i = 1; lis.length() != 0; i++) {
+			try {
+				lis = driver.findElement(By.xpath("/html/body/div[1]/main/div[1]/div[2]/div/section[2]/div/div[2]/form/div[1]/div/div/ul/li["+i+"]")).getText();
+				a[i-1]=lis;
+			}catch(Exception e){
+				break;
+			}
+			if(i==6) {
+				break;
+			}
+		};
+		File file = new File("error.txt");
+		FileWriter fw = new FileWriter(file, true);
+		PrintWriter pw = new PrintWriter(fw);
+		for(int i = 0; a[i]!=null; i++) {
+			System.out.println("gay");
+			LocalDateTime date = java.time.LocalDateTime.now();
+			a[i] = (a[i] + " ---------- " + date);
+			System.out.println(a[i]);
+	    	pw.println(a[i]);
+		}
 		pw.close();
+		Thread.sleep(15000);
+		driver.quit();
 		}
-		}
+	}
